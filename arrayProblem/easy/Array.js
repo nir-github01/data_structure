@@ -235,3 +235,33 @@
 
 // console.log("The second largest element in vector is >>> " , pq.front().element)
 // }
+
+
+/*** Count duplicates numbers  */
+
+// function duplicatNum(arr, n) {
+
+//   if(n<2){
+//     return "Invalid array"
+//   }
+//   let repeateNum = {};
+//   let i;
+//   for( i=0; i<n; i++){
+//     if(arr[i] in repeateNum){
+//       repeateNum[arr[i]] += 1;
+//     }else{
+//       repeateNum[arr[i]] = 1;
+//     }
+//   }
+//   for(const [key, value] of Object.entries(repeateNum)){
+//       if(value === 1){
+//         console.log(key)
+//       }
+//   }
+
+// }
+
+// //driver Code
+//  let arr = [12, 13, 1, 12, 13, 25, 32, 34, 34, 64, 34, 34, 66, 76, 12, 14, 15];
+//  let n = arr.length;
+// duplicatNum(arr, n)
