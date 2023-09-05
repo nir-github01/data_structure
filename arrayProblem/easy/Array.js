@@ -384,24 +384,74 @@
 
 //Approach - 2
 
-function arrangeGreaterNum(arr, n){
-  if(n < 2){
-    return "Invalid Array";
-  }
-  arr.sort((a, b)=> a-b)
-  let newarr = new Array();
-  let p=0, q=n-1;
-   for(let i=0; i<n; i++){
-    if((i + 1 )% 2 === 0){
-     newarr[i] = arr[q--]
-    }else{
-      newarr[i] = arr[p++]
-    }
-   }
-   console.log(arr)
-   console.log(newarr);
-}
+// function arrangeGreaterNum(arr, n){
+//   if(n < 2){
+//     return "Invalid Array";
+//   }
+//   arr.sort((a, b)=> a-b)
+//   let newarr = new Array();
+//   let p=0, q=n-1;
+//    for(let i=0; i<n; i++){
+//     if((i + 1 )% 2 === 0){
+//      newarr[i] = arr[q--]
+//     }else{
+//       newarr[i] = arr[p++]
+//     }
+//    }
+//    console.log(arr)
+//    console.log(newarr);
+// }
 
-let arr= [12, 5, 23, 4, 65, 90, 66, 78, 30, 76, 50];
-let n= arr.length;
-arrangeGreaterNum(arr, n)
+// let arr= [12, 5, 23, 4, 65, 90, 66, 78, 30, 76, 50];
+// let n= arr.length;
+// arrangeGreaterNum(arr, n)
+
+/** Rearrange an array in maximum minimum form using Two Pointer Technique */
+
+// function arrangeGreaterNum(arr, n){
+//   if(n < 2){
+//     return "Invalid Array";
+//   }
+//   arr.sort((a, b)=> a-b)
+//   let newarr = new Array();
+//   let p=0, q=n-1;
+//   let i=0;
+//    while( i<n){
+//     if(i % 2 === 0){
+//      newarr[i] = arr[q--]
+//     }else{
+//       newarr[i] = arr[p++]
+//     }
+//     i++;
+//    }
+//    console.log(newarr);
+// }
+
+// let arr= [12, 5, 23, 4, 65, 90, 66, 78, 30, 76, 50];
+// let n= arr.length;
+// arrangeGreaterNum(arr, n)
+
+//Approach - 2
+
+// function arrangeGreaterNum(arr, n){
+//   if(n < 2){
+//     return "Invalid Array";
+//   }
+//   arr.sort((a, b)=> a-b)
+//   let newarr = new Array();
+//   let p=0, q=n-1;
+//   let i=0;
+//    for(i; i<n; i++){
+//     if(i % 2 === 0){
+//      newarr[i] = arr[q--]
+//     }else{
+//       newarr[i] = arr[p++]
+//     }
+//    }
+//    console.log(newarr);
+// }
+
+// let arr= [12, 5, 23, 4, 65, 90, 66, 78, 30, 76, 50];
+// let n= arr.length;
+// arrangeGreaterNum(arr, n)
+
