@@ -352,3 +352,56 @@
 // let arr = [0, 12, 23, 0, 0, 0, 4, 0, 1, 0, 6, 0, 9, 0];
 // let n = arr.length;
 // addZeroEnd(arr, n)
+
+/** Rearrange alternate small and greater numbers  in array */
+
+// function arrangeGreaterNum(arr, n){
+//     if(n < 2){
+//       return "Invalid Array"
+//     }
+  
+//     for(let i=0; i<n; i++){
+//       if(i % 2 === 0){
+//         if( arr[i] < arr[i-1]){
+//           let temp = arr[i];
+//           arr[i] = arr[i-1];
+//           arr[i-1] = temp
+//         }
+//       }else{
+//         if(arr[i] > arr[i-1]){
+//         let temp = arr[i]
+//         arr[i] = arr[i-1]
+//         arr[i-1] = temp
+//         }
+//       }
+//     }
+//     console.log(arr)
+// }
+// // let arr= [1, 3, 2, 2, 5];
+// let arr = [12, 4,5, 23, 4, 65, 90, 66, 78, 30, 76, 50];
+// let n = arr.length;
+// arrangeGreaterNum(arr, n);
+
+//Approach - 2
+
+function arrangeGreaterNum(arr, n){
+  if(n < 2){
+    return "Invalid Array";
+  }
+  arr.sort((a, b)=> a-b)
+  let newarr = new Array();
+  let p=0, q=n-1;
+   for(let i=0; i<n; i++){
+    if((i + 1 )% 2 === 0){
+     newarr[i] = arr[q--]
+    }else{
+      newarr[i] = arr[p++]
+    }
+   }
+   console.log(arr)
+   console.log(newarr);
+}
+
+let arr= [12, 5, 23, 4, 65, 90, 66, 78, 30, 76, 50];
+let n= arr.length;
+arrangeGreaterNum(arr, n)
