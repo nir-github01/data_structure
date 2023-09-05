@@ -265,3 +265,90 @@
 //  let arr = [12, 13, 1, 12, 13, 25, 32, 34, 34, 64, 34, 34, 66, 76, 12, 14, 15];
 //  let n = arr.length;
 // duplicatNum(arr, n)
+
+/**Move all zero at end of arrays */
+
+// function moveZeroEnd(arr, n){
+//   if(n < 2){
+//     return "Invalid array";
+//   }
+//   arr.sort((a, b)=> a-b)
+//   arr.reverse()
+//   console.log(arr)
+
+// }
+// let arr = [0, 12, 23, 0, 0, 0, 4, 0, 1, 0, 6, 0, 9, 0];
+// let n = arr.length
+// moveZeroEnd(arr, n)
+
+
+//Approach - 2
+
+// function addZeroEnd(arr, n) {
+
+//   if(n < 2) {
+//     return "Invalid array";
+//   }
+
+//   for(let i=0; i<n; i++){
+//     for(let j=i+1; j<n; j++){
+//       if(arr[i] === 0){
+//         let temp = arr[i]
+//         arr[i] = arr[j];
+//         arr[j] = temp;
+//       }else break
+//     }
+//   }
+//   console.log(arr);
+// }
+// let arr = [0, 12, 23, 0, 0, 0, 4, 0, 1, 0, 6, 0, 9, 0];
+// let n= arr.length;
+// addZeroEnd(arr, n);
+
+//Approach - 3
+
+// function addZeroEnd(arr, n) {
+//     if(n < 2){ return "Invalid array";}
+//     let zeroArr = []
+//     let numArr = []
+//     for(let i=0; i< n; i++){
+//       if(arr[i] ===0){
+       
+//         zeroArr.push(arr[i]);
+//       }else{
+//        numArr.push(arr[i])
+//       }
+
+//     }
+//     let conCatArr = numArr.concat(zeroArr)
+//     let zeroAr = zeroArr.concat(numArr)
+//     console.log("zeroArr >>>", zeroAr)
+//     console.log(conCatArr)
+// }
+// let arr = [0, 12, 23, 0, 0, 0, 4, 0, 1, 0, 6, 0, 9, 0];
+// let n = arr.length;
+// addZeroEnd(arr, n)
+
+// function addZeroEnd(arr, n) {
+//   if(n < 2){ return "Invalid array";}
+//   let count = 0;
+//   for(let i=0; i< n; i++){
+//     if(arr[i] ===0){
+     
+//       // zeroArr.push(arr[i]);
+//       count ++
+//       arr.splice(i, 1);
+//       i--
+//     }
+//   }
+//   let j=0;
+//   while(j < count){
+//     arr.push(0)
+//     j++;
+//   }
+//   console.log(arr)
+
+// }
+// let arr = [0, 12, 23, 0, 0, 0, 4, 0, 1, 0, 6, 0, 9, 0];
+// let n = arr.length;
+// addZeroEnd(arr, n)
