@@ -455,3 +455,219 @@
 // let n= arr.length;
 // arrangeGreaterNum(arr, n)
 
+//Approach - 2
+
+// function maxMinArrange(arr, n){
+//   if(n<2){
+//     return "Invalid Array"
+//   }
+//   let newArr = new Array(n);
+//   let small = 0, large = n - 1;
+//   arr.sort((a, b) => a-b)
+//   let flag = true;
+//   for(let i=0; i< n; i++){
+//     if(flag)
+//       newArr[i] = arr[large--]
+//     else
+//       newArr[i] = arr[small++]
+     
+//     flag = !flag
+//   }
+//   for(let i=0; i<n; i++){
+//     arr[i] = newArr[i]
+//   }
+
+//   console.log(arr)
+// }
+// let arr= [12, 5, 23, 4, 65, 90, 66, 78, 30, 76, 50];
+// let n = arr.length;
+// maxMinArrange(arr, n)
+
+//Approach - 3
+
+// let a = [11, 12, 13, 14, 15, 16]
+// let n = a.length;
+// let last = new Array(n).fill(0);
+
+// let min_val = 0;
+// let max_val = n - 1;
+
+// let count = 0;
+// for(let i = 0; i < n; i++) {
+//   if(count % 2 === 0) {
+//     last[i] = a[max_val];
+//     max_val--;
+//   }else{
+//     last[i] = a[min_val];
+//     min_val++;
+//   }
+//   count++;
+// }
+
+// console.log(last.join(' '));
+
+/** Reversal algorithm for Array rotation */
+
+// function reversalNum(arr, n, d){
+//     if(n < 2) {
+//       return "Invalid array";
+//     }
+//     let newArr = new Array();
+
+//     for(let i=0; i < n; i++){
+//        newArr.unshift(arr[i])  
+//     }
+//     console.log(newArr)
+// }
+// let arr = [23, 34, 56, 7,8, 98, 6, 12, 32, 10]
+// let n = arr.length;
+// let d = 3;
+// reversalNum(arr, n)
+
+//Approach - 2
+// function swapNum(arr, start, end){
+//   debugger
+//   while(start < end){
+//     let temp = arr[start];
+//     arr[start] = arr[end];
+//     arr[end] =temp;
+//      start++;
+//      end--;
+//   }
+ 
+// }
+
+// function leftRotate(arr, d, n){
+//   debugger
+//     arr = [23, 34, 56, 7,8, 98, 6, 12, 32, 10];
+//     n = arr.length
+//     d = 3;
+//   if(d === 0) return ;
+//   d = d % n;
+//   console.log(d)
+//   swapNum(arr, 0, d - 1);
+//   swapNum(arr, d, n - 1)
+//   swapNum(arr, 0, n - 1)
+
+//   for(let i=0; i<n; i++){
+//     console.log(arr);
+//     document.write(arr)
+//    }
+// }
+// function printArr(arr, n){
+//    for(let i=0; i<n; i++){
+//     console.log(arr);
+//     document.write(arr)
+//    }
+  
+// }
+// let arr = [23, 34, 56, 7,8, 98, 6, 12, 32, 10];
+// let n = arr.length
+// let d = 3;
+// leftRotate(arr, d, n);
+// printArr(arr, n)
+
+
+//Approach - 3
+
+// function rotateArr(arr, n , k){
+//   k =k % n;
+
+//   arr.reverse();
+
+//   for(let i = 0; i < k /2; i++){
+//     const temp = arr[i];
+//     arr[i] = arr[k - i - 1];
+//     arr[k - i - 1] = temp;
+//   }
+
+//   for(let i= k; i < (n + k) / 2; i++){
+//     const temp = arr[i];
+//     arr[i] = arr[ n + k - i - 1];
+//     arr[n + k - i - 1] = temp;
+//   }
+
+//   console.log(arr)
+// }
+
+// let arr =  [23, 34, 56, 7,8, 98, 6, 12, 32, 10];
+// let n = arr.length;
+// let k = 4;
+
+// rotateArr(arr, n, k)
+
+
+
+//Approach - 4
+
+// function leftRotate(arr, n, k){
+//   let mod = k % n; 
+
+//   for(let i = 0; i < n; i++){
+//     console.log(arr[(mod + i) % n] + " ");
+//   }
+// }
+
+// let arr = [1, 3, 5, 7, 9];
+// let n = arr.length;
+// let k = 2;
+// leftRotate(arr, n, k);
+
+
+//Approach - 5
+
+// function leftRotate(arr, d, n){
+//   for(let i = 0; i < d; i++){
+//     leftRotatebyOne(arr, n)
+//   }
+// }
+// function leftRotatebyOne(arr, n){
+//   let i, temp = arr[0];
+//   for(i = 0; i < n - 1; i++){
+//   arr[i] = arr[i + 1];
+//   }
+// arr[n - 1] = temp;
+// }
+
+// function printArr(arr, n){
+//   for(let i=0; i < n; i++){
+//     console.log(arr)
+//   }
+// }
+
+// let arr = [1, 3, 5, 7, 9];
+// let n = arr.length;
+// let k = 2;
+
+// leftRotate(arr, k, n);
+// printArr(arr, n)
+
+
+
+//Approach - 6
+
+// function leftRotate(arr, k){
+//   k %= arr.length;
+
+//   arr = reverseArray(arr, 0, k - 1);
+//   arr = reverseArray(arr, k, arr.length - 1);
+//   arr = reverseArray(arr, 0, arr.length - 1);
+
+//   console.log(arr.join(" "));
+// }
+
+// function reverseArray(arr, start, end){
+//   while(start < end){
+//     let temp = arr[start];
+//     arr[start] = arr[end];
+//     arr[end] = temp;
+//     start++;
+//     end--;
+//   }
+//   return arr;
+// }
+
+// let arr = [1, 3, 5, 7, 9];
+// let n = arr.length;
+// let k = 2;
+// leftRotate(arr, n, k)
