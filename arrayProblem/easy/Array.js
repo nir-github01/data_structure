@@ -967,28 +967,50 @@
 // uniqueElement(arr,  n)
 
 
-//Approach - Using Map Method
+//Approach 
+
+// function singleElement(arr, n){
+
+//   if(n < 2){
+//     return "Invalid array"
+//   }
+
+//   let low = 0, high = n - 1;
+//   let mid;
+//   while(low <= high ){
+//     mid = (low + high) / 2;
+//     if(arr[mid] == arr[mid^1]){
+//       low = mid + 1;
+
+//     }else{
+//       high = mid - 1;
+//     }
+//   }
+//   return arr[low];
+// }
+// let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
+// let n = arr.length;
+// arr.sort((a, b) => a-b)
+// console.log(singleElement(arr, n))
+
+//Approach - Map Method 
 
 function singleElement(arr, n){
 
-  if(n < 2){
-    return "Invalid array"
-  }
-
-  let low = 0, high = n - 1;
-  let mid;
-  while(low <= high ){
-    mid = (low + high) / 2;
-    if(arr[mid] == arr[mid^1]){
-      low = mid + 1;
-
+  let mm = new Map();
+  for(let i = 0; i < n; i++){
+    if(mm.has(arr[i])){
+      mm.set(arr[i], mm.get(arr[i]) + 1);
     }else{
-      high = mid - 1;
+      mm.set(arr[i], 1)
     }
   }
-  return arr[low];
+  for(let [key, value] of mm.entries()){
+    if(value === 1)
+    return key
+  }
 }
+
 let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
 let n = arr.length;
-arr.sort((a, b) => a-b)
 console.log(singleElement(arr, n))
