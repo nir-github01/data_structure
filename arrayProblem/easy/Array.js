@@ -699,26 +699,106 @@
 
 //Approach - 2
 
-function swapArray(arr, p, q){
-     let temp = arr[p];
-     arr[p] = arr[q];
-     arr[q] = temp;
-}
-function waveFormSort(arr, n){
-  if(n < 2){
-    return "Invalid array"
-  }
-  // arr.sort((a, b)=> a-b)
-  // arr.reverse()
-  for(let i=0; i < n; i +=2){
-    if(i > 0 && arr[i-1] > arr[i])
-        swapArray(arr, i-1, i)
+// function swapArray(arr, p, q){
+//      let temp = arr[p];
+//      arr[p] = arr[q];
+//      arr[q] = temp;
+// }
+// function waveFormSort(arr, n){
+//   if(n < 2){
+//     return "Invalid array"
+//   }
+//   // arr.sort((a, b)=> a-b)
+//   // arr.reverse()
+//   for(let i=0; i < n; i +=2){
+//     if(i > 0 && arr[i-1] > arr[i])
+//         swapArray(arr, i-1, i)
 
-    if(i < n-1 && arr[i+1]>arr[i])
-      swapArray(arr, i, i+1)
-  }
-  console.log(arr);
-}
-let arr = [12, 45, 67, 89, 90, 21, 32, 15, 43];
-let n = arr.length;
-waveFormSort(arr, n)
+//     if(i < n-1 && arr[i+1]>arr[i])
+//       swapArray(arr, i, i+1)
+//   }
+//   console.log(arr);
+// }
+// let arr = [12, 45, 67, 89, 90, 21, 32, 15, 43];
+// let n = arr.length;
+// waveFormSort(arr, n)
+
+
+/** Sort an array which contain 1 to n values */
+
+// function swapArray(arr, a, b){
+//   let temp = a;
+//    a=b;
+//    b=temp;
+// }
+
+// function sortArray(arr, n){
+//    if(n < 2){
+//     return "Invalid Array"
+//    }
+
+//    for(let i=0; i < n; i++){
+//     for(let j=i+1; j < n; j++){
+//       if(arr[i] > arr[j]){
+//        let temp = arr[i];
+//        arr[i] = arr[j];
+//        arr[j] = temp
+//       }
+//     }
+//    }
+//    console.log(arr)
+// }
+// let arr = [12, 45, 67, 89, 90, 21, 32, 15, 43];
+// let n = arr.length;
+// sortArray(arr, n)
+
+
+/** Count the number of possible triangles */
+
+
+// function countTriangle(arr, n) {
+//   if (n < 3) {
+//     return "Invalid Array";
+//   }
+//   let sum_i = 0,
+//     sum_j = 0,
+//     sum_k = 0,
+//     count = 0;
+//     let arrs =[];
+//     let set = new Set();
+//   let newArr = {};
+//   for (let i = 0; i < n; i++) {
+//     for (let j = i + 1; j < n; j++) {
+//       for (let k = j + 1; k < n; k++) {
+//         sum_i = arr[i] + arr[j] > arr[k];
+//         sum_j = arr[i] + arr[k] > arr[j];
+//         sum_k = arr[j] + arr[k] > arr[i];
+
+//         if (sum_i && sum_j && sum_k) {
+//           count += 1;
+//           arrs.push(arr[i]); arrs.push(arr[j]);arrs.push(arr[k]);
+//           // set.add(arr[i]);set.add(arr[j]);set.add(arr[k]);
+//           newArr[arr[i]] = count;
+//           newArr[arr[j]] = count;
+//           newArr[arr[k]] = count;
+        
+//         }
+//       }
+//     }
+//   }
+//   const splittedArray = new Array();
+//   while (arrs.length > 0) {
+//     splittedArray.push(arrs.splice(0, 3));  
+//     splittedArray.map((a) => set.add(a))
+//   }
+//   console.log( set)
+//   console.log("Set of array to form of triangle  >>> "  + splittedArray)
+//   console.log("Counting of numbers to form triangle >>> " + JSON.stringify( newArr));
+//   console.log("Total number of triangles are >>>  " + count)
+// }
+
+// let arr = [10, 21, 22, 100, 101, 200, 300];
+// let n = arr.length;
+// countTriangle(arr, n);
+
+
