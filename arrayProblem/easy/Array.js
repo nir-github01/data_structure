@@ -941,3 +941,27 @@
 // let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
 // let n = arr.length;
 // uniqueElement(arr,  n)
+
+function uniqueElement(arr, n){
+   
+  if(n < 2){
+    return "Invalid Array"
+  }
+   let newArr = {}
+  for(let i = 0 ; i < n ; i++){
+    let count = 0;
+      for(let j = 0; j < n; j++){
+        if(arr[i] === arr[j]){
+          count += 1;
+          newArr[arr[i]] = count
+        }
+      }
+      if(count === 1){
+        console.log(arr[i]);
+       }
+  }
+  console.log(newArr)
+}
+let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
+let n = arr.length;
+uniqueElement(arr,  n)
