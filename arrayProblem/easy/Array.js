@@ -942,26 +942,53 @@
 // let n = arr.length;
 // uniqueElement(arr,  n)
 
-function uniqueElement(arr, n){
+// function uniqueElement(arr, n){
    
+//   if(n < 2){
+//     return "Invalid Array"
+//   }
+//    let newArr = {}
+//   for(let i = 0 ; i < n ; i++){
+//     let count = 0;
+//       for(let j = 0; j < n; j++){
+//         if(arr[i] === arr[j]){
+//           count += 1;
+//           newArr[arr[i]] = count
+//         }
+//       }
+//       if(count === 1){
+//         console.log(arr[i]);
+//        }
+//   }
+//   console.log(newArr)
+// }
+// let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
+// let n = arr.length;
+// uniqueElement(arr,  n)
+
+
+//Approach - Using Map Method
+
+function singleElement(arr, n){
+
   if(n < 2){
-    return "Invalid Array"
+    return "Invalid array"
   }
-   let newArr = {}
-  for(let i = 0 ; i < n ; i++){
-    let count = 0;
-      for(let j = 0; j < n; j++){
-        if(arr[i] === arr[j]){
-          count += 1;
-          newArr[arr[i]] = count
-        }
-      }
-      if(count === 1){
-        console.log(arr[i]);
-       }
+
+  let low = 0, high = n - 1;
+  let mid;
+  while(low <= high ){
+    mid = (low + high) / 2;
+    if(arr[mid] == arr[mid^1]){
+      low = mid + 1;
+
+    }else{
+      high = mid - 1;
+    }
   }
-  console.log(newArr)
+  return arr[low];
 }
 let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
 let n = arr.length;
-uniqueElement(arr,  n)
+arr.sort((a, b) => a-b)
+console.log(singleElement(arr, n))
