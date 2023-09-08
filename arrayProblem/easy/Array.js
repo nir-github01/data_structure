@@ -828,26 +828,116 @@
 
 //Approach - 3
 
-function countTriangle(arr, n){
-if(n < 3){
-  return "Invalid Array"
-}
-arr.sort((a, b) => a-b)
-let count = 0;
-for(let i=n-1; i > 0; i--){
-  let l = 0, r= i-1; 
-  while(l < r){
-   if(arr[l] + arr[r] > arr[i]){
-    count += r-l;
-    r--;
-   }else{
-    l++
-   }
-  }
-}
-console.log("Number of possible triagle >>>  " ,count)
-}
+// function countTriangle(arr, n){
+// if(n < 3){
+//   return "Invalid Array"
+// }
+// arr.sort((a, b) => a-b)
+// let count = 0;
+// for(let i=n-1; i > 0; i--){
+//   let l = 0, r= i-1; 
+//   while(l < r){
+//    if(arr[l] + arr[r] > arr[i]){
+//     count += r-l;
+//     r--;
+//    }else{
+//     l++
+//    }
+//   }
+// }
+// console.log("Number of possible triagle >>>  " ,count)
+// }
 
-let arr = [10, 21, 22, 100, 101, 200, 300];
-let n = arr.length;
-countTriangle(arr, n)
+// let arr = [10, 21, 22, 100, 101, 200, 300];
+// let n = arr.length;
+// countTriangle(arr, n)
+
+
+/** Print all Distinct ( Unique ) Elements in given Array */
+
+// function uniqueElement(arr, n){
+//   if(n < 2){
+//     return "Invalid array"
+//   }
+//   let i=0;
+//   let newArr= {};
+//   let count = 0;
+//   for(i; i < n ; i++){
+//      if(arr[i] in newArr){
+//       count += 1
+//       newArr[arr[i]] = count;
+//      }else{
+//       count = 1
+//       newArr[arr[i]] = count;
+//      }
+//   }
+//   console.log(newArr)
+// }
+// let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
+// let n = arr.length;
+// uniqueElement(arr, n)
+
+
+//Approach - 2
+
+// function uniqueElement(arr, n){
+
+//   if(n < 2){
+//     return "Invalid Array"
+//   }
+//   let newArr = [];
+//   for(let i=0; i < n; i++){
+//     let j;
+//      for( j=0; j < i; j++)
+//       if(arr[i] == arr[j])
+//         break;
+        
+//         if(i == j)
+//          newArr.push(arr[i])
+   
+//   }
+//   console.log(newArr)
+// }
+
+// let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
+// let n = arr.length;
+// uniqueElement(arr, n);
+
+//Approch - 3;
+
+// function uniqueElement(arr, n){
+//    if(n < 2){
+//     return "Invalid Array"
+//    }
+//    let set = new Set(arr);
+//    console.log(set)
+//   //  set.forEach((value) => {
+//   //   console.log(value)
+//   //  })
+// }
+
+// let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
+// let n= arr.length;
+// uniqueElement(arr, n)
+
+
+//Approach - 4 (Hash Method)
+
+// function uniqueElement(arr, n){
+
+//   if(n < 2){
+//     return "Invalid Array"
+//   }
+
+//   let set = new Set();
+//   for(let i = 0; i < n; i++){
+//     if(!set.has(arr[i])){
+//       set.add(arr[i]);
+//     }
+//   }
+//   console.log( set)
+// }
+
+// let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
+// let n = arr.length;
+// uniqueElement(arr,  n)
