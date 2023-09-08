@@ -1052,22 +1052,83 @@
 // let n = arr.length;
 // leadersNum(arr, n)
 
+//Approach 
 
-function leadersNum(arr, n){
-    let stack = [];
-    stack.push(arr[n-1]);
-    for(let i =n-2; i >= 0; i--){
-      let temp = stack.pop()
-      stack.push(temp);
-      if(arr[i] >= temp){
-        stack.push(arr[i])
+// function leadersNum(arr, n){
+//     let stack = [];
+//     stack.push(arr[n-1]);
+//     for(let i =n-2; i >= 0; i--){
+//       let temp = stack.pop()
+//       stack.push(temp);
+//       if(arr[i] >= temp){
+//         stack.push(arr[i])
+//       }
+//     }
+//     while(stack.length > 0){
+//       console.log(stack.pop() + " ")
+//     }
+// }
+
+// let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
+// let n= arr.length;
+// leadersNum(arr, n)
+
+
+/** Find Subarray with given sum | Set 1 (Non-negative Numbers) */
+
+// function Subarray(arr, n, target){
+
+//   let set= new Set()
+//   let newArr = new Array();
+//   for(let i=0; i < n; i++){
+//     for(let j=i+1; j < n; j++){
+//       for(let k=j+1; k<n; k++){
+//           let sum = arr[i] + arr[j] + arr[k]
+//           if(sum === target){
+//             newArr.push(arr[i])
+//             newArr.push(arr[j])
+//             newArr.push(arr[k])
+//             set.add(arr[i])
+//             set.add(arr[j])
+//             set.add[arr[k]]    
+//            }
+//       }
+//     }
+//   }
+//   console.log(newArr)
+//   console.log(set)
+// }
+
+// let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
+// let n = arr.length;
+// let target = 170;
+// Subarray(arr, n, target)
+
+
+//Approach - 2
+
+function subArray(arr, n , sum){
+ 
+  for(let i =0; i < n; i++){
+    let currentSum = arr[i];
+    if(currentSum == sum){
+      console.log("Sum found ar index  " + i)
+      return ;
+    }else{
+      for(let j=i+ 1; j < n; j++){
+        currentSum +=arr[j]
+        if(currentSum === sum ){
+          console.log("sum found between indexes  " + i + "  and  " + j);
+          return;
+        }
       }
     }
-    while(stack.length > 0){
-      console.log(stack.pop() + " ")
-    }
+  }
+  console.log("No subarray found")
+  return;
 }
 
 let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
-let n= arr.length;
-leadersNum(arr, n)
+let n = arr.length;
+let sum = 170;
+subArray(arr, n, sum)
