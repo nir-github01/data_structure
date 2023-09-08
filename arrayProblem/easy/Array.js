@@ -801,4 +801,53 @@
 // let n = arr.length;
 // countTriangle(arr, n);
 
+//Approach - 2
 
+// function countTriangle(arr, n){
+
+//   if(n < 3){
+//     return "Invalid array";
+//   }
+//   let count = 0;
+//   arr.sort((a, b) => a-b)
+//   for(let i=0; i < n; i++){
+//     for(let j=i+1; j < n; j++){
+//       let sum = arr[i] + arr[j]
+//         if(sum > arr[j+1]){
+//           count += 1
+//         }
+//     }
+//   }
+//   console.log("Number of possible triangle >>> ",count)
+
+// }
+// let arr =  [10, 21, 22, 100, 101, 200, 300];
+// let n = arr.length;
+// countTriangle(arr, n);
+
+
+//Approach - 3
+
+function countTriangle(arr, n){
+if(n < 3){
+  return "Invalid Array"
+}
+arr.sort((a, b) => a-b)
+let count = 0;
+for(let i=n-1; i > 0; i--){
+  let l = 0, r= i-1; 
+  while(l < r){
+   if(arr[l] + arr[r] > arr[i]){
+    count += r-l;
+    r--;
+   }else{
+    l++
+   }
+  }
+}
+console.log("Number of possible triagle >>>  " ,count)
+}
+
+let arr = [10, 21, 22, 100, 101, 200, 300];
+let n = arr.length;
+countTriangle(arr, n)
