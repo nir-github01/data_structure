@@ -995,22 +995,79 @@
 
 //Approach - Map Method 
 
-function singleElement(arr, n){
+// function singleElement(arr, n){
 
-  let mm = new Map();
-  for(let i = 0; i < n; i++){
-    if(mm.has(arr[i])){
-      mm.set(arr[i], mm.get(arr[i]) + 1);
-    }else{
-      mm.set(arr[i], 1)
+//   let mm = new Map();
+//   for(let i = 0; i < n; i++){
+//     if(mm.has(arr[i])){
+//       mm.set(arr[i], mm.get(arr[i]) + 1);
+//     }else{
+//       mm.set(arr[i], 1)
+//     }
+//   }
+//   for(let [key, value] of mm.entries()){
+//     if(value === 1)
+//     return key
+//   }
+// }
+
+// let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
+// let n = arr.length;
+// console.log(singleElement(arr, n))
+
+
+/** Leaders in an array */
+
+// function leadersNum(arr, n){
+//     for(let i = 0; i<n; i++){
+//       let j ; 
+//       for( j= i+ 1; j < n; j++){
+//         if(arr[i] < arr[j])
+//         break;
+//       }
+//       if(j == n){
+//         console.log(arr[i])
+//       }
+//     }
+// }
+
+// let arr = [16, 17, 4, 3, 5, 2];
+// let n = arr.length;
+// leadersNum(arr, n)
+
+//Approach - 2
+
+// function leadersNum(arr, n){
+
+//    let right = arr[n-1];
+//    console.log(right)
+//   for(let i = n-2; i >=0; i--){
+//     if(right < arr[i]){
+//     right = arr[i];
+//     console.log(right)
+//     }
+//   }
+//   }
+// let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
+// let n = arr.length;
+// leadersNum(arr, n)
+
+
+function leadersNum(arr, n){
+    let stack = [];
+    stack.push(arr[n-1]);
+    for(let i =n-2; i >= 0; i--){
+      let temp = stack.pop()
+      stack.push(temp);
+      if(arr[i] >= temp){
+        stack.push(arr[i])
+      }
     }
-  }
-  for(let [key, value] of mm.entries()){
-    if(value === 1)
-    return key
-  }
+    while(stack.length > 0){
+      console.log(stack.pop() + " ")
+    }
 }
 
 let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
-let n = arr.length;
-console.log(singleElement(arr, n))
+let n= arr.length;
+leadersNum(arr, n)
