@@ -671,3 +671,54 @@
 // let n = arr.length;
 // let k = 2;
 // leftRotate(arr, n, k)
+
+
+/**Sort an array in wave form */
+
+// function swap(arr, p, q){
+//   let temp = arr[p];
+//   arr[p] = arr[q];
+//   arr[q] = temp;
+// }
+// function waveSort(arr, n){
+
+//   if(n < 2){
+//     return "Invalid Array"
+//   }
+
+//   arr.sort((a, b) => a-b )
+
+//   for(let i= 0; i < n - 1; i+=2){
+//      swap(arr, i, i+1)
+//   }
+//   console.log(arr.reverse())
+// }
+// let arr = [12, 45, 67, 89, 90, 21, 32, 15, 43];
+// let n = arr.length;
+// waveSort(arr, n)
+
+//Approach - 2
+
+function swapArray(arr, p, q){
+     let temp = arr[p];
+     arr[p] = arr[q];
+     arr[q] = temp;
+}
+function waveFormSort(arr, n){
+  if(n < 2){
+    return "Invalid array"
+  }
+  // arr.sort((a, b)=> a-b)
+  // arr.reverse()
+  for(let i=0; i < n; i +=2){
+    if(i > 0 && arr[i-1] > arr[i])
+        swapArray(arr, i-1, i)
+
+    if(i < n-1 && arr[i+1]>arr[i])
+      swapArray(arr, i, i+1)
+  }
+  console.log(arr);
+}
+let arr = [12, 45, 67, 89, 90, 21, 32, 15, 43];
+let n = arr.length;
+waveFormSort(arr, n)
