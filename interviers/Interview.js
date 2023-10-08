@@ -261,12 +261,160 @@
 // console.log((a == b));
 // console.log((a === b));
 
-var x = 23;
-(function(){
-var x = 43;
-(function random(){
-x++;
-console.log(x);
-var x = 21;
-})();
-})();
+// var x = 23;
+// (function(){
+// var x = 43;
+// (function random(){
+// x++;
+// console.log(x);
+// var x = 21;
+// })();
+// })();
+
+
+// function Interview(){
+//   debugger
+// const b = [1, 2, 3, 4, 5, 6, 7, 8, 9,10];
+
+// for(let i=0; i < 10; i++){
+//   setTimeout(()=> {
+//     document.write(b[i])
+//     console.log(b[i])}, 1000)
+// }
+
+// for(var i=0; i < 10; i++){
+//   setTimeout(()=>{ 
+//     document.write(b[i])
+//     console.log(b[i])
+//   }
+//     , 1000)
+// }
+// }
+
+
+// let obj = { id: "1", name: "user22", age: "26", work: "programmer" };
+// console.log(Object.keys( obj));
+// console.log(Object.values( obj))
+// console.log(Object.entries( obj));
+
+
+//Write the code to find the vowels
+
+
+// let findVowels =(str)=> {
+//   let count = 0; 
+//   let vowels = ['a', 'e', 'i', 'o', 'u'];
+//   for(let char of str.toLowerCase()){
+//     if(vowels.includes(char)){
+//       count++;
+//     }
+//   }
+//   console.log(count)
+// }
+// let str = "AEIOUAEIOU";
+// findVowels(str)
+
+
+/** Write the code given If two strings are anagrams of one
+another, then return true.
+ */
+
+// function isAnagram(firstWord, secondWord){
+    
+
+//   let a = firstWord.split("").join('');
+//   let b = secondWord.split("").join('');
+//   console.log("firstWord >>> ", a);
+//   console.log("secondWord >>> ", b);
+  
+//   console.log(a===b)
+// }
+// let firstWord = "Deepak";
+// let secondWord = "Aman";
+// isAnagram(firstWord, secondWord);
+
+
+// function rightRotationArr(arr){
+//     let n = arr.length;
+//     let newArr = [];
+//   for(let i =0; i < n ; i++){
+//       newArr.unshift(arr[i]);
+//   }
+//   console.log(newArr)
+// }
+// let arr = [23, 45, 6, 7, 54, 56, 65, 78]
+// rightRotationArr(arr);
+
+// let hero = {
+//   powerLevel:42,
+//   getPower(){
+//     return this.powerLevel;
+//   }
+// }
+
+// let getPower = hero.getPower;
+
+// let hero2 = {
+//   powerLevel:99
+// }
+
+// console.log(getPower())
+// console.log(getPower.apply(hero2)) 
+
+// const a = function() {
+//   console.log(this);
+//   const b = {
+//     func1:function(){
+//       console.log(this);
+//     }
+//   }
+//   const c = {
+//     func2:()=> {
+//       console.log(this);
+//     }
+//   }
+//   b.func1();
+//   c.func2();
+// }
+// a();
+
+//code - 3
+
+// const b = {
+//   name: "Vivek",
+//   f:function(){
+//     var self = this;
+//     console.log("First >>> ", this.name);
+//     (function(){
+//       console.log("second >>> ", this.name);
+//       console.log("third >>> ", self.name);
+//     })();
+//   }
+// }
+// b.f();
+
+// (function(a){
+//   return (function(){
+//     console.log(a);
+//     a = 23;
+
+//   })();
+// })(45);
+
+function bigFunc(element){
+  let newarray = new Array(700).fill("💟 " + "💝 ");
+ 
+  return newarray[element];
+
+}
+
+console.log(bigFunc(500));
+console.log(bigFunc(600));
+
+function randomFunc(){
+  for(var i = 0; i < 2; i++){
+  setTimeout(()=> console.log("💘 " + i),1000);
+  }
+  }
+  randomFunc();
+  

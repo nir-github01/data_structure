@@ -1107,28 +1107,28 @@
 
 //Approach - 2
 
-function subArray(arr, n , sum){
+// function subArray(arr, n , sum){
  
-  for(let i =0; i < n; i++){
-    let currentSum = arr[i];
-    if(currentSum == sum){
-      console.log("Sum found ar index  " + i)
-      return ;
-    }else{
-      for(let j=i+ 1; j < n; j++){
-        currentSum +=arr[j]
-        if(currentSum === sum ){
-          console.log("sum found between indexes  " + i + "  and  " + j);
-          return;
-        }
-      }
-    }
-  }
-  console.log("No subarray found")
-  return;
-}
+//   for(let i =0; i < n; i++){
+//     let currentSum = arr[i];
+//     if(currentSum == sum){
+//       console.log("Sum found ar index  " + i)
+//       return ;
+//     }else{
+//       for(let j=i+ 1; j < n; j++){
+//         currentSum +=arr[j]
+//         if(currentSum === sum ){
+//           console.log("sum found between indexes  " + i + "  and  " + j);
+//           return;
+//         }
+//       }
+//     }
+//   }
+//   console.log("No subarray found")
+//   return;
+// }
 
-let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
-let n = arr.length;
-let sum = 170;
-subArray(arr, n, sum)
+// let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
+// let n = arr.length;
+// let sum = 170;
+// subArray(arr, n, sum)
