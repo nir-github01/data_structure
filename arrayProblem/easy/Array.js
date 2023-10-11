@@ -1131,4 +1131,27 @@
 // let arr = [12, 13, 14, 17, 12, 13, 14, 15, 156, 16, 1, 16, 3, 2, 3];
 // let n = arr.length;
 // let sum = 170;
-// subArray(arr, n, sum)
+// subArray(arr, n, sum);
+
+// function fixArray(arr){
+//   let n = arr.length;
+//   let vector = new Array(n).fill(-1);
+//   for(let i =0; i<n; i++){
+//     if(arr[i] != -1){
+//       vector[arr[i]] = arr[i];
+//     }
+//   }
+//   for(let i=0; i< n; i++){
+//     arr[i] = vector[i];
+//   }
+//   console.log(arr);
+// }
+
+// let arr = [-1, 1, 2, 3, 4,5, 6, -1, 0, 9, 10];
+// fixArray(arr);
+
+function fixArray(arr){
+
+}
+let arr = [-1, 1, 2, 3, 4,5, 6, -1, 0, 9, 10];
+fixArray(arr)

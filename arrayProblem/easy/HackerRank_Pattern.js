@@ -326,35 +326,275 @@
 // let x1=0, v1=3, x2=4, v2=2;
 // jumpOfKangaroo(x1, v1, x2, v2);
 
-function getTotalX (a, b){
-  let  n = a.length;
-  let m = b.length;
-  let maxArrayA = Math.max(...a);
-  let minArrayA = Math.min(...a);
-  let minArrayB = Math.min(...b);
-  let count =0;
+// function getTotalX (a, b){
+//   let  n = a.length;
+//   let m = b.length;
+//   let maxArrayA = Math.max(...a);
+//   let minArrayA = Math.min(...a);
+//   let minArrayB = Math.min(...b);
+//   let count =0;
    
-            for(let k = 0; k < m; k++){
-                for(let j=minArrayA; j < minArrayB+1; j++){
-                    if(minArrayB % j ===0 &&  b[k] % j ===0){
-                       if(n ===1){
-                        for(let i=0; i < n; i++){
-                           if(j % a[i] ===0 && j % minArrayA ===0 && a[i] >= maxArrayA){
-                            console.log('j >>> ', j)
-                            count += 1
-                           }
-                        }
-                      }
-                    }
-                }
-            }
+//             for(let k = 0; k < m; k++){
+//                 for(let j=minArrayA; j < minArrayB+1; j++){
+//                     if(minArrayB % j ===0 &&  b[k] % j ===0){
+//                        if(n ===1){
+//                         for(let i=0; i < n; i++){
+//                            if(j % a[i] ===0 && j % minArrayA ===0 && a[i] >= maxArrayA){
+//                             console.log('j >>> ', j)
+//                             count += 1
+//                            }
+//                         }
+//                       }
+//                     }
+//                 }
+//             }
   
-  console.log(count/m);
-}
-let a = [2];
-let b =[20, 30, 12];
-// let a = [3, 4]
-// let b = [24, 48]
+//   console.log(count/m);
+// }
+// let a = [2];
+// let b =[20, 30, 12];
+// // let a = [3, 4]
+// // let b = [24, 48]
+// // let a = [2, 4]
+// // let b = [16, 32, 96]
+// getTotalX(a, b);
+
+// function getTotalX(a, b){
+//   let count = 0; 
+//   let na = Math.max(...a);
+//   let mi = Math.min(...b);
+//   for(let i=na; i<=mi; i++){
+//     if((a.every(e=> i % e === 0)) && b.every(e=>e%i===0)){
+//       count++
+//     }
+//   }
+//   console.log(count);
+// }
+
 // let a = [2, 4]
 // let b = [16, 32, 96]
-getTotalX(a, b);
+// getTotalX(a, b);
+
+// function getTotalX(a, b){
+//   let result = 0;
+//   let index = 1;
+//   let cloneA = a.splice(1, a.length);
+//   while(a[0]*index<= b[0]){
+//     if(cloneA.every(item => (a[0]*index) % item===0) 
+//     && b.every(item=> item % (a[0]*index)===0)){
+//   result++;}
+//   index++;
+//   }
+// console.log(result);
+// }
+
+
+// function minMaxScore(arr){
+
+//   let n = arr.length;
+//   let minScore = new Array();
+//   let maxScore = new Array();
+//   let minCount=0;
+//   let maxCount=0;
+//   let initialVal = arr[0]
+//   for(let i=0; i<n; i++){
+//     if(arr[i] >= initialVal ){
+//       let maxValue = Math.max(...maxScore);
+//       if(arr[i] > maxValue){
+//         maxScore.push(arr[i]);
+//       }else{
+//       maxScore.push(maxValue)
+//       }
+//     }else{
+//       let max =maxScore.length;
+//       let maxVal = Math.max(...maxScore);
+//       for(let j=max-1; j> max-2 ; j--){
+//         if(maxScore[max - 1] >= maxVal ){
+//         maxScore.push(maxScore[max-1])
+//         }
+//       }
+//     }
+//      if(arr[i] <= initialVal){
+//       let minValue = Math.min(...minScore);
+//       if(arr[i] < minValue){
+//         minScore.push(arr[i]);
+//       }else{
+//         minScore.push(minValue)
+//       }
+   
+//     }else{
+//       let  min =minScore.length;
+//       let minVal = Math.min(...minScore)
+//       for(let k=min-1; k >min-2  ; k--){
+//         if(minScore[min - 1] <= minVal){
+//         minScore.push(minScore[min-1 ])
+//         }
+//       }
+//     }
+//   }
+//   for(let x=0; x < maxScore.length ; x++){
+//     if(maxScore[x]<maxScore[x+1]){
+//       maxCount += 1
+//     }
+//   }
+//   for(let y=0; y<minScore.length; y++){
+//     if(minScore[y] > minScore[y+1]){
+//       minCount +=1;
+//     }
+//   }
+//   console.log(" minScore >>> ", minScore, "MaxScore >>> ",  maxScore)
+//   console.log("MinCount >>> ", minCount, "maxCount >>> ", maxCount)
+// }
+
+// let arr=[12, 24, 10, 24];
+// // let arr = [10, 5, 20, 20, 4, 5, 2, 25, 1]
+// // let arr = [3, 4, 21, 36, 10, 28, 35, 5, 24, 42];
+// minMaxScore(arr)
+
+
+// function breakingRecords(scores){
+//   let best=0;
+//   let worst =0;
+//   let bestScore =scores[0];
+//   let worstScore = scores[0];
+//   for(let i=0; i < scores.length; i++){
+//     if(scores[i] > bestScore){
+//       bestScore = scores[i]
+//       best++;
+//       // continue;
+//     }
+//     if(scores[i] < worstScore){
+//       worstScore = scores[i];
+//       worst++;
+//       // continue;
+//     }
+//   }
+//   console.log(worst, best);
+// }
+// // let arr=[12, 24, 10, 24];
+// let arr = [10, 5, 20, 20, 4, 5, 2, 25, 1]
+// // let arr = [3, 4, 21, 36, 10, 28, 35, 5, 24, 42];
+// breakingRecords(arr)
+
+
+// function birthDay(s, d, m){
+//   let n = s.length;
+//   let count =0;
+//   let sum =0;
+//   for(let i=0; i< n - (m-1); i++){
+//      let sumOfSegment  = s.slice(i, i+m).reduce((r, v, )=> r+v, 0);
+//     //  console.log(sumOfSegment);
+//      if(sumOfSegment === d){
+//       count++;
+//      }
+//   }
+//   console.log(count)
+// }
+// let s=[2, 2, 1, 3, 2];
+// let d=4;
+// let m=2;
+// birthDay(s, d, m);
+
+
+// function sumOfArray(arr){
+// let sum =arr.reduce((r, v) => r+v);
+// console.log(sum)
+// }
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8]
+// sumOfArray(arr);
+
+
+// function divisibleSumPairs(n, k, ar){
+//   let count =0;  
+//   for(let i=0; i<n; i++){
+//       for(let j =i; j<n; j++ ){
+//         let sum = ar[i] + ar[j];
+//         if(sum %  k === 0 && i !== j){
+//           console.log('i >> ', i, 'ar[i] >> ', ar[i],  "j >> ", j, 'ar[j] >> ', ar[j]);
+//           count++;
+//         }
+//       }
+//     }
+//     console.log(count);
+// }
+// let ar = [1, 3, 2, 6, 1, 2];
+// let n=ar.length;
+// let k=3;
+// divisibleSumPairs(n, k, ar)
+
+// function birdsFrequentType(arr){ 
+//    let n = arr.length;
+//    let count =0;
+//    let countBirdType ={};
+//    let maxSight =0;
+//    let maxBirdType =0;
+//    for(let i=0; i < n ;i++){
+//      const typeBird = arr[i];
+//      if(countBirdType[typeBird]){
+//       countBirdType[typeBird] += 1;
+//      }else{
+//       countBirdType[typeBird] = 1;
+//      }
+//    }
+//    for(let birdtype in countBirdType){
+//     if(countBirdType[birdtype] > maxSight){
+//       maxSight = countBirdType[birdtype];
+//       maxBirdType = birdtype
+//     }
+//    }
+//    console.log(maxBirdType);
+//    console.log(countBirdType)
+// }
+// let arr = [1, 3, 3, 4, 3, 5];
+// birdsFrequentType(arr);
+
+// function dayOfTheProgrammer(year){
+//   let erDays = 256;
+//   let days =null;
+//   let month = 9;
+//   let sumOfMonth = (5*31 + 2*30)
+//   let isLeapYear = (year % 4 === 0)
+//   ? ((year % 100 === 0) ? ((year < 1918 || (year % 400 === 0)) ? true : false) : true)
+//   : false;
+//    if(year === 1918){
+//     days = 26;
+//   }else if(isLeapYear ){
+//       days = parseInt(erDays -  (sumOfMonth + 29));
+//   }else{
+//     days = parseInt(erDays -  (sumOfMonth + 28));
+//   }
+//   console.log(`${days}/${month}/${year}`)
+// }
+// let year = 1800;
+// dayOfTheProgrammer(year);
+
+function sockMerchant(n, ar) {
+  // Write your code here
+  let newarr ={};
+  let sum =0;
+  for(let i=0; i<n; i++){
+      if(newarr[ar[i]]){
+          newarr[ar[i]] += 1;
+      }else{
+        newarr[ar[i]] = 1;
+      }
+  }
+   Object.values(newarr).map(val=>  {
+    if(val > 1){
+      if(val % 2 === 0){
+        let add = val / 2
+        sum += add;
+      }else{
+        let add = Math.floor(val /2);
+        sum += add
+      }
+    }
+    } );
+console.log(Math.floor(sum))
+console.log('newArr >> ', newarr);
+
+}
+let ar = [4, 5, 5, 5, 6, 6, 4, 1, 4, 4, 3, 6, 6, 3, 6, 1, 4, 5, 5, 5]
+// let ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
+let n = ar.length;
+sockMerchant(n, ar)
