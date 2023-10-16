@@ -1151,7 +1151,9 @@
 // fixArray(arr);
 
 function fixArray(arr){
-
+   
+  let n = arr.length;
+  
 }
 let arr = [-1, 1, 2, 3, 4,5, 6, -1, 0, 9, 10];
 fixArray(arr)
