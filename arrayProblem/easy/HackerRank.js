@@ -759,21 +759,41 @@
 // pickingNumbers(arr)
 
 
-function pickingNumbers(a){
-    let frequencies = new Array(100).fill(0)
+// function pickingNumbers(a){
+//     let frequencies = new Array(100).fill(0)
   
-    for (let num of a) {
-    frequencies[num]++
-    }
+//     for (let num of a) {
+//     frequencies[num]++
+//     }
 
-    let result = frequencies[0]
-    for(let i=0; i < frequencies.length - 1; i++){
+//     let result = frequencies[0]
+//     for(let i=0; i < frequencies.length - 1; i++){
     
-    let two = frequencies[i] + frequencies[i+1]
-    if(two > result) result = two
+//     let two = frequencies[i] + frequencies[i+1]
+//     if(two > result) result = two
     
+//     }
+//     console.log(result)
+// }
+// let arr = [4, 6, 5, 3, 3, 1];
+// pickingNumbers(arr)
+
+
+function hurdleRace(k, height){
+ 
+    let sub = 0;
+    for(let i=0; i<height.length; i++){
+        if(height[i] > k){
+            let diff = height[i] - k;
+            if(diff > sub){
+                sub = diff
+            }
+        }
     }
-    console.log(result)
+    console.log(sub)
+
 }
-let arr = [4, 6, 5, 3, 3, 1];
-pickingNumbers(arr)
+
+let arr = [1, 6, 3, 5, 2]
+let k = 4;
+hurdleRace(k, arr);
