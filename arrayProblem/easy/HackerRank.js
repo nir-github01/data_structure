@@ -5,12 +5,11 @@
 //   sum += arr[i]
 // }
 // console.log(sum)
-// } 
+// }
 
 // let arr= [2, 3, 4]
 // let sum = 0;
 // sumOfArray(arr, sum)
-
 
 // function compareArray(a, b){
 //   let n = a.length;
@@ -35,7 +34,7 @@
 //       bobSum +=1;
 //       bobPointArray.pop();
 //       bobPointArray.push(bobSum);
-      
+
 //     }else{
 //       if(alicePointArray.length == 0){
 //         alicePointArray.push(0)
@@ -61,8 +60,6 @@
 
 // compareArray(a, b);
 
-
-
 // 1000000001 1000000002 1000000003 1000000004 1000000005
 
 // function sumOfArray(arr){
@@ -79,7 +76,7 @@
 /** Sum of diagonal of matrix */
 // 1 2 3
 // 4 5 6
-// 9 8 9  
+// 9 8 9
 
 // function diagonalSumOfMatrix(matrix){
 //     let n = matrix.length;
@@ -102,7 +99,6 @@
 //   [10, 8, -12]]
 // // let matrix =[[ 1, 2, 3],[ 4, 5, 6],[ 9, 8, 9 ]]
 // diagonalSumOfMatrix(matrix)
-
 
 /** calculate the ratios of its elements that are positive, negative, and zero */
 
@@ -130,7 +126,6 @@
 // let n = arr.length;
 // integerRatio(arr, n);
 
-
 //Approach - 2
 // function plusMinus(arr){
 // let neg= arr.filter(elem => Math.sign(elem)=== -1).length/arr.length;
@@ -143,7 +138,6 @@
 // }
 // let arr = [1, 1, 0, -1, -1]
 // plusMinus(arr)
-
 
 /// Return sub array which bitwise operator is equal to another integers
 
@@ -181,21 +175,20 @@
 
 //   let n = arr.length;
 //   let minSum = 0;
-//   let maxSum = 0; 
+//   let maxSum = 0;
 //    arr.sort((a, b)=> a-b)
 //   for(let i =0; i < n; i++){
 //     if(i !== n-1){
 //       minSum += arr[i];
 //     }
 //     if(i !== 0){
-//       maxSum += arr[i]; 
+//       maxSum += arr[i];
 //     }
 //   }
 //   return (minSum +" " + maxSum)
 // }
 //  let arr = [12, 34, 56, 78, 32, 45, 90];
 // console.log(minMaxSum(arr));
-
 
 // function stairCase(n) {
 //    let string = "";
@@ -227,7 +220,7 @@
 //     }
 //     console.log(newArr, arr, n)
 //     let arr1=[];
-   
+
 //     Object.values(newArr).map(val => {
 //        arr1.push(val);
 //        console.log(arr1);
@@ -251,7 +244,7 @@
 // }
 
 // function medianArr (arr){
-   
+
 //     let n = arr.length;
 //     let mid = Math.floor(n/2);
 //     arr.sort((a,b)=> a-b);
@@ -270,7 +263,7 @@
 //             let temp = arr[i];
 //             arr[i] = arr[j];
 //             arr[j] = temp;
-             
+
 //             count += 1;
 //         }
 //     }
@@ -280,9 +273,8 @@
 // let arr = [2, 1, 3, 1, 2 ];
 // insertionSort(arr);
 
-
 // function insertionSortMoves(arr) {
-  
+
 //      let n = arr.length;
 //      let i, key, j;
 //      for(i=1; i<n; i++){
@@ -359,22 +351,22 @@
 //         // return arr[i]
 //     }
 //    }
-// } 
+// }
 
 // let arr = [56, 78, 90, 34, 29, 84];
 // roundGrade(arr);
 
-// function gradingStudents1(grades){ 
-//     let finalGrades = grades.map((grade) => { 
-//         return grade >= 38 && grade % 5 >= 3  ? grade - (grade % 5) + 5 : grade;         
-//       }); 
-//     console.log( finalGrades); 
+// function gradingStudents1(grades){
+//     let finalGrades = grades.map((grade) => {
+//         return grade >= 38 && grade % 5 >= 3  ? grade - (grade % 5) + 5 : grade;
+//       });
+//     console.log( finalGrades);
 //    }
 //    let arr = [56, 78, 90, 34, 29, 84];
 //    gradingStudents1(arr);
 
 // function countApplesAndOranges(s, t, a, b, apples, oranges){
-     
+
 //     let n = apples.length;
 //     let m = oranges.length;
 //     let countApples = 0;
@@ -382,7 +374,7 @@
 //     let sumOfApples=0;
 //     let sumOfOranges= 0;
 //     for(let i =0; i < n; i++){
-        
+
 //             sumOfApples = a + apples[i];
 //             if( sumOfApples > s && sumOfApples <t){
 //                 countApples += 1;
@@ -404,7 +396,6 @@
 // let s=2, t=3, a=1, b=5;
 // countApplesAndOranges(s, t, a, b, apples, oranges);
 
-
 // function jumpOfKangaroo(x1, v1, x2, v2){
 
 //     if((x1-x2)%(v1-v2) ===0 && !(x2 > x1 && v2 > v1)){
@@ -412,7 +403,7 @@
 //     }else{
 //         console.log("NO");
 //     }
-  
+
 // }
 // let x1=0, v1=3, x2=4, v2=2;
 // jumpOfKangaroo(x1, v1, x2, v2);
@@ -424,7 +415,7 @@
 //   let minArrayA = Math.min(...a);
 //   let minArrayB = Math.min(...b);
 //   let count =0;
-   
+
 //             for(let k = 0; k < m; k++){
 //                 for(let j=minArrayA; j < minArrayB+1; j++){
 //                     if(minArrayB % j ===0 &&  b[k] % j ===0){
@@ -439,7 +430,7 @@
 //                     }
 //                 }
 //             }
-  
+
 //   console.log(count/m);
 // }
 // let a = [2];
@@ -451,7 +442,7 @@
 // getTotalX(a, b);
 
 // function getTotalX(a, b){
-//   let count = 0; 
+//   let count = 0;
 //   let na = Math.max(...a);
 //   let mi = Math.min(...b);
 //   for(let i=na; i<=mi; i++){
@@ -471,14 +462,13 @@
 //   let index = 1;
 //   let cloneA = a.splice(1, a.length);
 //   while(a[0]*index<= b[0]){
-//     if(cloneA.every(item => (a[0]*index) % item===0) 
+//     if(cloneA.every(item => (a[0]*index) % item===0)
 //     && b.every(item=> item % (a[0]*index)===0)){
 //   result++;}
 //   index++;
 //   }
 // console.log(result);
 // }
-
 
 // function minMaxScore(arr){
 
@@ -512,7 +502,7 @@
 //       }else{
 //         minScore.push(minValue)
 //       }
-   
+
 //     }else{
 //       let  min =minScore.length;
 //       let minVal = Math.min(...minScore)
@@ -542,7 +532,6 @@
 // // let arr = [3, 4, 21, 36, 10, 28, 35, 5, 24, 42];
 // minMaxScore(arr)
 
-
 // function breakingRecords(scores){
 //   let best=0;
 //   let worst =0;
@@ -567,7 +556,6 @@
 // // let arr = [3, 4, 21, 36, 10, 28, 35, 5, 24, 42];
 // breakingRecords(arr)
 
-
 // function birthDay(s, d, m){
 //   let n = s.length;
 //   let count =0;
@@ -586,7 +574,6 @@
 // let m=2;
 // birthDay(s, d, m);
 
-
 // function sumOfArray(arr){
 // let sum =arr.reduce((r, v) => r+v);
 // console.log(sum)
@@ -594,9 +581,8 @@
 // let arr = [1, 2, 3, 4, 5, 6, 7, 8]
 // sumOfArray(arr);
 
-
 // function divisibleSumPairs(n, k, ar){
-//   let count =0;  
+//   let count =0;
 //   for(let i=0; i<n; i++){
 //       for(let j =i; j<n; j++ ){
 //         let sum = ar[i] + ar[j];
@@ -613,7 +599,7 @@
 // let k=3;
 // divisibleSumPairs(n, k, ar)
 
-// function birdsFrequentType(arr){ 
+// function birdsFrequentType(arr){
 //    let n = arr.length;
 //    let count =0;
 //    let countBirdType ={};
@@ -694,11 +680,11 @@
 //   let sum =0;
 //   let arr =[];
 //   for(let i=0; i<keybords.length; i++){
-   
+
 //     for(let j=0; j<drives.length; j++){
 //       sum = keybords[i] + drives[j];
 //       if(sum <=b){
-      
+
 //         arr.push(sum);
 //       }
 //     }
@@ -710,7 +696,6 @@
 // let drives = [5, 2, 8];
 // let b = 10;
 // getMoneySpent(keybords, drives, b)
-
 
 // function catAndMouse(x, y, z) {
 //   let dist = z - x;
@@ -746,11 +731,11 @@
 //     for(let j =0; j<subArray.length; j++){
 //         dif = Math.abs(subArray[0] - subArray[j]);
 //         console.log("dif >>> ", dif, subArray)
-        
+
 //         if(dif > 1){
 //             console.log("subArray >>> >>> ", subArray)
 //            subArray.pop(subArray[j]);
-        
+
 //         }
 //     }
 //     console.log(subArray, subArray.length, diff, );
@@ -758,29 +743,27 @@
 // // let arr = [4, 6, 5, 3, 3, 1]
 // pickingNumbers(arr)
 
-
 // function pickingNumbers(a){
 //     let frequencies = new Array(100).fill(0)
-  
+
 //     for (let num of a) {
 //     frequencies[num]++
 //     }
 
 //     let result = frequencies[0]
 //     for(let i=0; i < frequencies.length - 1; i++){
-    
+
 //     let two = frequencies[i] + frequencies[i+1]
 //     if(two > result) result = two
-    
+
 //     }
 //     console.log(result)
 // }
 // let arr = [4, 6, 5, 3, 3, 1];
 // pickingNumbers(arr)
 
-
 // function hurdleRace(k, height){
- 
+
 //     let sub = 0;
 //     for(let i=0; i<height.length; i++){
 //         if(height[i] > k){
@@ -815,7 +798,6 @@
 //     }
 //     console.log(numOfPageTurned)
 // }
-
 
 // function designerPdfViewer(h, word){
 //     let wordLength = word.length;
@@ -867,9 +849,8 @@
 //              if(mod){
 //                 count += 1;
 //              }
-//             i++;       
+//             i++;
 //             }
-
 
 //     }
 //     console.log(count);
@@ -877,8 +858,7 @@
 
 // beautifulDays(20, 23, 6);
 
-
-//Reverse Digit numbers 
+//Reverse Digit numbers
 // function reverseDigit(n){
 //     let reversedNum =0;
 //     while(n > 0){
@@ -892,7 +872,7 @@
 
 // function viralAdvertasing(n){
 //     let peoples = 5;
-   
+
 //     let likesCount =0;
 //     for(let i = 1; i <= n; i++){
 
@@ -927,7 +907,7 @@
 
 //     while(n > 0){
 //       let digit = n % 10;
-        
+
 //       if(num % digit === 0){
 //          count += 1;
 //       }
@@ -942,13 +922,84 @@
 
 // Factorial of numbers;
 
-function extraLargeNumFactorials(num){
-  let factorial =BigInt(1) ;
-   while(num >= 1){
-     factorial *=BigInt(num)
-    num--
-  }
-  console.log(factorial.toString());
-}
+// function extraLargeNumFactorials(num){
+//   let factorial =BigInt(1) ;
+//    while(num >= 1){
+//      factorial *=BigInt(num)
+//     num--
+//   }
+//   console.log(factorial.toString());
+// }
 
-extraLargeNumFactorials(25);
+// extraLargeNumFactorials(25);
+
+// function appeandAndDelete(s, t, k){
+//    let sstrArr = s.split('');
+//    let tstrArr = t.split('');
+//     let n = sstrArr.length;
+//     let m = tstrArr.length;
+
+//   let count = 0;
+//    for(let i =0; i < n && i <m; i++ ){
+//         if(sstrArr[i] === tstrArr[i]){
+//           count += 1;
+//         }
+//    }
+//    let sMinusCount = n - count;
+//    let tMinusCount = m - count;
+
+//    let stk = k - (sMinusCount + tMinusCount);
+//     let string =null;
+//    if((sMinusCount + tMinusCount) > k && stk % 2 !== 0){
+//        string = "No"
+//    }else if((sMinusCount + tMinusCount) < k){
+//     string = "Yes";
+//    }else{
+//     string = "No"
+//    }
+
+//    console.log(string);
+// }
+// let s = "hackerhappy";
+// let t = 'hackerrank';
+// let k = 9;
+// appeandAndDelete(s, t, k)
+
+// function extraLargeNumFactorials(num){
+//   let factorial =BigInt(1) ;
+//    while(num >= 1){
+//      factorial *=BigInt(num)
+//     num--
+//   }
+//   console.log(factorial.toString());
+// }
+
+// extraLargeNumFactorials(25);
+
+function appeandAndDelete(s, t, k) {
+  let a = s,
+    moves = 0,
+    empty = false;
+
+  for (let i = 0; i < Math.max(s.length, t.length); i++) {
+    if (a[i] == t[i]) continue;
+    else if (!a[i] && !!t[i]) {
+      a += t[i];
+      moves++;
+    } else {
+      if (i == 0) empty = true;
+      a = s.substr(0, i);
+      moves += s.length - i--;
+    }
+  }
+  if (
+    s.length + t.length <= k ||
+    (moves <= k && ((k - moves) % 2 == 0 || empty == true))
+  )
+    return "Yes";
+  else return "No";
+}
+let s = "hackerhappy";
+let t = "hackerrank";
+let k = 9;
+appeandAndDelete(s, t, k);
