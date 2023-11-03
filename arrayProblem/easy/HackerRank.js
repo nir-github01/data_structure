@@ -879,13 +879,27 @@
 
 
 //Reverse Digit numbers 
-function reverseDigit(n){
-    let reversedNum =0;
-    while(n > 0){
-         reversedNum = reversedNum * 10 + n % 10;
-             n= Math.floor(n / 10);
-    }
-    console.log(reversedNum);
-}
+// function reverseDigit(n){
+//     let reversedNum =0;
+//     while(n > 0){
+//          reversedNum = reversedNum * 10 + n % 10;
+//              n= Math.floor(n / 10);
+//     }
+//     console.log(reversedNum);
+// }
 
-reverseDigit(1239087);
+// reverseDigit(1239087);
+
+function viralAdvertasing(n){
+    let peoples = 5;
+   
+    let likesCount =0;
+    for(let i = 1; i <= n; i++){
+
+    let likes = Math.floor(peoples/2);
+      peoples = likes * 3;
+      likesCount += likes;
+    }
+    console.log(likesCount);
+}
+viralAdvertasing(5);
