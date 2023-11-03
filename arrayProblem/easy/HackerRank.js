@@ -779,21 +779,113 @@
 // pickingNumbers(arr)
 
 
-function hurdleRace(k, height){
+// function hurdleRace(k, height){
  
-    let sub = 0;
-    for(let i=0; i<height.length; i++){
-        if(height[i] > k){
-            let diff = height[i] - k;
-            if(diff > sub){
-                sub = diff
-            }
-        }
-    }
-    console.log(sub)
+//     let sub = 0;
+//     for(let i=0; i<height.length; i++){
+//         if(height[i] > k){
+//             let diff = height[i] - k;
+//             if(diff > sub){
+//                 sub = diff
+//             }
+//         }
+//     }
+//     console.log(sub)
 
+// }
+
+// let arr = [1, 6, 3, 5, 2]
+// let k = 4;
+// hurdleRace(k, arr);
+
+// function pageCount(n, p){
+//     let numOfPageTurned = 0;
+
+//     if(p === 1 || p === n){
+//         console.log(numOfPageTurned)
+//     }
+//     if(n % 2 === 0 && p === n - 1){
+//         return 1;
+//     }
+//     for(let i=1; i <= n/2; i++){
+//         if(i === p || n-i === p){
+//             numOfPageTurned = Math.floor(Math.min(i, n-1) / 2)
+//             break;
+//         }
+//     }
+//     console.log(numOfPageTurned)
+// }
+
+
+// function designerPdfViewer(h, word){
+//     let wordLength = word.length;
+//     let stringArr = word.split('');
+//     let arr = [];
+//     let alphabetArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+//     for(let i = 0; i < alphabetArr.length; i++){
+//         for(let j = 0; j < h.length; j++){
+//             if(stringArr.includes(alphabetArr[i]) && i === j){
+//                  arr.push(h[j]);
+//                  console.log(arr)
+//             }
+//         }
+//     }
+//     let max = Math.max(...arr);
+//     console.log(max * wordLength);
+// }
+
+// let h= [1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+// let word ="abc"
+// designerPdfViewer(h, word);
+
+// function utopianTree(n){
+//     let height = 1;
+//     let arr = [];
+//     for(let i=0; i<= n; i++){
+//         if(i % 2 === 0){
+//             height *= 2;
+//             arr.push(height);
+//         }else{
+//             height +=1;
+//             arr.push(height);
+//         }
+//     }
+//     let max = Math.max(...arr);
+//     console.log(max);
+// }
+
+// let n = 3;
+// utopianTree(n)
+
+// function beautifulDays (i, j, k){
+//     let count = 0;
+//     if(i< j){
+//         while(i <= j){
+//             let numStr = i.toString().split('');
+//             let revNum = numStr.reverse().join('');
+//              let mod  = Math.abs(revNum - i) % k === 0;
+//              if(mod){
+//                 count += 1;
+//              }
+//             i++;       
+//             }
+
+
+//     }
+//     console.log(count);
+// }
+
+// beautifulDays(20, 23, 6);
+
+
+//Reverse Digit numbers 
+function reverseDigit(n){
+    let reversedNum =0;
+    while(n > 0){
+         reversedNum = reversedNum * 10 + n % 10;
+             n= Math.floor(n / 10);
+    }
+    console.log(reversedNum);
 }
 
-let arr = [1, 6, 3, 5, 2]
-let k = 4;
-hurdleRace(k, arr);
+reverseDigit(1239087);
