@@ -976,30 +976,86 @@
 
 // extraLargeNumFactorials(25);
 
-function appeandAndDelete(s, t, k) {
-  let a = s,
-    moves = 0,
-    empty = false;
+// function appeandAndDelete(s, t, k) {
+//   let a = s,
+//     moves = 0,
+//     empty = false;
 
-  for (let i = 0; i < Math.max(s.length, t.length); i++) {
-    if (a[i] == t[i]) continue;
-    else if (!a[i] && !!t[i]) {
-      a += t[i];
-      moves++;
-    } else {
-      if (i == 0) empty = true;
-      a = s.substr(0, i);
-      moves += s.length - i--;
-    }
-  }
-  if (
-    s.length + t.length <= k ||
-    (moves <= k && ((k - moves) % 2 == 0 || empty == true))
-  )
-    return "Yes";
-  else return "No";
+//   for (let i = 0; i < Math.max(s.length, t.length); i++) {
+//     if (a[i] == t[i]) continue;
+//     else if (!a[i] && !!t[i]) {
+//       a += t[i];
+//       moves++;
+//     } else {
+//       if (i == 0) empty = true;
+//       a = s.substr(0, i);
+//       moves += s.length - i--;
+//     }
+//   }
+//   if (
+//     s.length + t.length <= k ||
+//     (moves <= k && ((k - moves) % 2 == 0 || empty == true))
+//   )
+//     return "Yes";
+//   else return "No";
+// }
+// let s = "hackerhappy";
+// let t = "hackerrank";
+// let k = 9;
+// appeandAndDelete(s, t, k);
+
+//Square range bewteen two number  
+// function sqaurers(a, b){
+  
+//   let count = 0;
+//   for(let i = a; i <=b; i++){
+//     if(i > 1 && Math.sqrt(i) % 1 === 0){
+//        count += 1;
+//     }
+//   }
+//   console.log(count);
+// }
+
+// sqaurers(11, 20);
+
+// method 2
+
+// function checkSquareNum(num){
+//     let left = 2;
+//     let right = Math.floor(num / 2);
+//     while(left <= right){
+//       let mid = Math.floor((left + right) / 2)
+//       let sqr = mid * mid;
+//       if(sqr === num){
+//         return true
+//       }else{
+//         if(num > sqr){
+//           left = mid + 1;
+//         }else{
+//           right = mid - 1;
+//         }
+//       }
+//     }
+//     return false;
+// }
+
+// function rangeNumSqr(a, b){
+//   let count =0;
+//   for(let i = a; i <= b; i++){
+//     checkSquareNum(i);
+//     if(checkSquareNum(i) === true){
+//       count += 1;
+//     }
+//   }
+//   console.log(count);
+// }
+
+// rangeNumSqr(24, 100);
+
+
+
+function rangeNumSqr(a, b){
+   
+ console.log (Math.floor(Math.sqrt(b)) -  Math.ceil(Math.sqrt(a)) + 1);
 }
-let s = "hackerhappy";
-let t = "hackerrank";
-let k = 9;
-appeandAndDelete(s, t, k);
+rangeNumSqr(24, 100)
