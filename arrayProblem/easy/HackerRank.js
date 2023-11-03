@@ -904,18 +904,38 @@
 // }
 // viralAdvertasing(5);
 
-function permutationEquation(p){
-  let arr =[];
-  let hash = [];
-  let n = p.length;
-  for(let i=1; i<=n; i++){
-       hash[p[i - 1]] = i;
-  }
+// function permutationEquation(p){
+//   let arr =[];
+//   let hash = [];
+//   let n = p.length;
+//   for(let i=1; i<=n; i++){
+//        hash[p[i - 1]] = i;
+//   }
 
-  for(let j=0; j < n; j++){
-    arr.push(hash[hash[j + 1]]);
-  }
-  console.log(arr)
+//   for(let j=0; j < n; j++){
+//     arr.push(hash[hash[j + 1]]);
+//   }
+//   console.log(arr)
+// }
+// let arr = [4, 3, 5, 1, 2]
+// permutationEquation(arr)
+
+function findDigits(n){
+    let reversedNum =0;
+    let num = n;
+    let count =0;
+
+    while(n > 0){
+      let digit = n % 10;
+        
+      if(num % digit === 0){
+         count += 1;
+      }
+      reversedNum = reversedNum * 10 + digit;
+      n = Math.floor(n/10);
+    }
+   console.log(count)
+   console.log(reversedNum)
 }
-let arr = [4, 3, 5, 1, 2]
-permutationEquation(arr)
+let n= 12;
+findDigits(n);
