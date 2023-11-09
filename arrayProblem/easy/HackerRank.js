@@ -1052,10 +1052,60 @@
 
 // rangeNumSqr(24, 100);
 
+// function rangeNumSqr(a, b){
+//  console.log (Math.floor(Math.sqrt(b)) -  Math.ceil(Math.sqrt(a)) + 1);
+// }
+// rangeNumSqr(24, 100)
+
+/** Alternative letters  */
+
+// function alternatingCharacters(s) {
+//   let str = s.split('');
+//   let n = str.length;
+//   let count = 0;  
+//   for(let i=0; i<n; i++){
+//       for(let j= i+1; j< i+2; j++){
+//          if(s[i] === s[j] && i !==j ){
+//            count += 1;
+//          }
+//       }
+//     }
+//     console.log(count);
+// }
+
+// alternatingCharacters("ABAAAB");
 
 
-function rangeNumSqr(a, b){
-   
- console.log (Math.floor(Math.sqrt(b)) -  Math.ceil(Math.sqrt(a)) + 1);
-}
-rangeNumSqr(24, 100)
+// function beautifulBinaryString(b){
+    
+//   let str = b.split('010');
+//   let count =0;
+//   for(let i=0; i<str.length; i++){
+//        if(str[i] === ''){
+//         count += 1;
+//        }
+//   }
+//   console.log(count);
+//   console.log(str)
+// }
+
+// beautifulBinaryString('0100101010');
+
+// function beautifulBinaryString(b){
+    
+//   let str = b.split('');
+//   let arr = [];
+//   let i=0;
+//   while(i < str.length){
+//          if(str[i] === '0' && str[i+1] === '1' && str[i+2] === '0'){
+//           arr.push(str[i] +''+str[i+1]+''+str[i+2]);
+//           i += 3;
+//          }else{
+//           i++;
+//          }
+//   }
+//   console.log(arr.length);
+// }
+// beautifulBinaryString('0100101010100010110100100110110100011100111110101001011001110111110000101011011111011001111100011101')
+
+// beautifulBinaryString('010010101010101');
