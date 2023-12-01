@@ -1004,9 +1004,9 @@
 // let k = 9;
 // appeandAndDelete(s, t, k);
 
-//Square range bewteen two number  
+//Square range bewteen two number
 // function sqaurers(a, b){
-  
+
 //   let count = 0;
 //   for(let i = a; i <=b; i++){
 //     if(i > 1 && Math.sqrt(i) % 1 === 0){
@@ -1062,7 +1062,7 @@
 // function alternatingCharacters(s) {
 //   let str = s.split('');
 //   let n = str.length;
-//   let count = 0;  
+//   let count = 0;
 //   for(let i=0; i<n; i++){
 //       for(let j= i+1; j< i+2; j++){
 //          if(s[i] === s[j] && i !==j ){
@@ -1075,9 +1075,8 @@
 
 // alternatingCharacters("ABAAAB");
 
-
 // function beautifulBinaryString(b){
-    
+
 //   let str = b.split('010');
 //   let count =0;
 //   for(let i=0; i<str.length; i++){
@@ -1092,7 +1091,7 @@
 // beautifulBinaryString('0100101010');
 
 // function beautifulBinaryString(b){
-    
+
 //   let str = b.split('');
 //   let arr = [];
 //   let i=0;
@@ -1109,3 +1108,240 @@
 // beautifulBinaryString('0100101010100010110100100110110100011100111110101001011001110111110000101011011111011001111100011101')
 
 // beautifulBinaryString('010010101010101');
+
+// function theLoveLetterMystery(s){
+//      let str = s.split('');
+//      let left =0;
+//      let right=str.length - 1;
+//      let arr=[];
+//      let mid = Math.floor(str.length /2);
+//      let count =0;
+//      while(left<=right){
+//       if(str[left].charCodeAt() === str[right].charCodeAt()){
+//         left++;
+//         right--;
+//       }else if(str[left].charCodeAt() < str[right].charCodeAt()){
+//         while(str[right].charCodeAt() !== str[left].charCodeAt()){
+//           Math.floor(str[right].charCodeAt(0)- 1)
+//          count += 1;
+//         }
+//         left++;
+//         right--;
+//       }else{
+//         while(str[left].charCodeAt() !== str[right].charCodeAt()){
+//           Math.floor(str[left].charCodeAt(0)-1);
+//           count += 1;
+//          }
+//          left++;
+//          right--;
+//       }
+//      }
+
+// }
+
+// theLoveLetterMystery("abcd");
+
+// function generateMagicSquares(magicSquare1) {
+//   const magicSquares = [];
+//   magicSquares.push(magicSquare1);
+
+//   for (let i = 0; i < 3; i++) {
+//     var rotation = magicSquares[i].map((val, index) => 
+//       // console.log("Val >> ", val)
+//        magicSquares[i].map((row) =>
+//         row[index]).reverse());
+//     console.log("Rotations >>> ", rotation);
+//     magicSquares.push(rotation);
+//   }
+
+//   //flip each one
+
+//   for (let i = 0; i < 4; i++) {
+//     var flipped = magicSquares[i].map((_, colIndex) =>
+//       magicSquares[i].map((row) => row[colIndex])
+//     );
+//     magicSquares.push(flipped);
+//   }
+
+//   console.log("MagicSquares >>> ", magicSquares);
+//   return magicSquares;
+// }
+
+// function determineCost(inputArray, validMagicSquare) {
+//   let cost = 0;
+//   for (let i = 0; i < 3; i++) {
+//     for (let j = 0; j < 3; j++) {
+//       cost += Math.abs(inputArray[i][j] - validMagicSquare[i][j]);
+//     }
+//   }
+
+//   console.log("Cost >>>> ", cost);
+//   return cost;
+// }
+
+// function formingMagicSquare(s) {
+//   // const magicSquare1 = s;
+
+//   const magicSquare1 = [
+//     [4, 9, 2],
+//     [3, 5, 7],
+//     [8, 1, 6],
+//   ];
+//   const magicSquares = generateMagicSquares(magicSquare1);
+
+//   let minCost = Number.MAX_SAFE_INTEGER;
+
+//   let cost = 0;
+//   for (let i = 0; i < magicSquares.length; i++) {
+//     cost = determineCost(s, magicSquares[i]);
+//     console.log("cost >> ", cost);
+
+//     if (cost <= minCost) {
+//       minCost = cost;
+//     }
+//   }
+//   console.log("minCost >>> ", minCost);
+//   return minCost;
+// }
+
+// const finalCost = formingMagicSquare([
+//   [4, 9, 2],
+//   [3, 5, 7],
+//   [8, 1, 6],
+// ]);
+// console.log("final Cost >>> ", finalCost);
+
+
+// function generateMagicSquares(magicSquare1){
+// 	const magicSquares = [];
+// 	magicSquares.push(magicSquare1);
+
+// 	// we need to rotate it 3 times to get all rotations
+// 	for(let i = 0; i < 3; i++){
+// 		var rotation = magicSquares[i].map((val, index) => magicSquares[i].map(row => row[index]).reverse());
+// 		// console.log(rotation)
+// 		magicSquares.push(rotation);
+// 	}
+
+// 	// and then flip each one
+// 	for(let i = 0; i < 4; i++){
+// 		var flipped = magicSquares[i].map((_, colIndex) => magicSquares[i].map(row => row[colIndex]));
+// 		magicSquares.push(flipped);
+// 	}
+	
+// 	return magicSquares;
+// }
+
+// function determineCost(inputArray, validMagicSquare){
+// 	let cost = 0;
+	
+// 	for(let i = 0; i < 3; i++){ // each row
+		
+// 		for(let j = 0; j < 3; j++){ // each digit
+
+// 			cost += Math.abs(inputArray[i][j] - validMagicSquare[i][j]);
+// 		}
+// 	}
+
+// 	return cost;
+
+// }
+
+// function formingMagicSquare(s){
+// 	// const magicSquares = [[[4, 9, 2], [3, 5, 7], [8, 1, 6]], [[6, 1, 8], [7, 5, 3], [2, 9, 4]], [[8, 1, 6], [3, 5, 7], [4, 9, 2]], [[2, 9, 4], [7, 5, 3], [6, 1, 8]], [[8, 3, 4], [1, 5, 9], [6, 7, 2]], [[4, 3, 8], [9, 5, 1], [2, 7, 6]], [[6, 7, 2], [1, 5, 9], [8, 3, 4]], [[2, 7, 6], [9, 5, 1], [4, 3, 8]]];
+// 	const magicSquare1 = [[4, 9, 2], [3, 5, 7], [8, 1, 8]];
+// 	const magicSquares = generateMagicSquares(magicSquare1);
+	
+// 	// let minCost = 100000;
+// 	let minCost = Number.MAX_SAFE_INTEGER;
+// 	let cost = 0;
+// 	for(let i = 0; i < magicSquares.length; i++){
+// 		cost = determineCost(s, magicSquares[i]);
+
+// 		if(cost < minCost){
+// 			minCost = cost;
+// 		}
+// 	}
+//   console.log(minCost)
+// 	return minCost;
+// }
+
+// const finalCost = formingMagicSquare([[4, 9, 2], [3, 5, 7], [8, 1, 5]]);
+// console.log(finalCost);
+
+
+
+// function formingMagicSquares(s){
+//   const squares = ['618753294', '816357492', '834159672', '438951276', '672159834', '276951438', '294753618', '492357816'];
+//    let min = 100;
+//    let cost = (s, squares) => {
+//     return [...s.map(value => value.join('')).join('')].reduce((target, item, index)=> {
+//          target += Math.abs(+item - +squares[index])
+//          return target;
+//     }, 0)
+//    };
+//   //  console.log("cost >>> ", cost)
+//    squares.forEach((item, index)=> {
+//     let value = cost(s, squares[index]);
+
+//     (value < min) && (min = value);
+//    });
+//     // console.log("min >>> ", min)
+//    return min;
+// }
+
+
+/** Thunderstroms clouds */
+
+ 
+// function jumpingOnClouds(c, k) {
+
+//   let n = c.length;
+//   let e = 100;
+
+//   for(let i=0; i< n ; i +=k){
+//     if(c[i] === 1){
+//        e = Math.floor(e - (1+k));
+//     }else{
+//       e = Math.floor(e - 1);
+//     }
+//     console.log("k >> ", k, "i >>>  ", i, `c${i} >> `, c[i])
+//   }
+//   console.log("Value of e >>> ", e)
+   
+// }
+
+// let c = [0, 0, 1, 0, 0, 1, 1, 0];
+// let k = 2;
+// // let c = [1, 1, 1, 0, 1, 1, 0, 0, 0, 0]
+// // let k = 3;
+// jumpingOnClouds(c, k)
+
+function jumpingOnClouds(c, k) {
+
+  let n = c.length;
+  let e = 100;
+  let ind = 0;
+   let val =1;
+   if(n%k === 0){
+    val = 1;
+   }else{
+    val = k
+   }
+  
+  for(let i=0; i< n * val  ; i +=k){
+      if(c[(i+k) % n] === 1  ){
+        e = Math.floor(e - (1+2));
+     }else if(c[(i+k) % n] === 0){
+       e = Math.floor(e - 1);
+     }
+  }
+  console.log("Value of e >>> ", e)
+   
+}
+
+let c = [0, 0, 1, 0, 0, 1, 1, 0];
+let k = 2;
+// let c = [1, 1, 1, 0, 1, 1, 0, 0, 0, 0]
+// let k = 3;
+jumpingOnClouds(c, k)

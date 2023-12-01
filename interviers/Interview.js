@@ -401,20 +401,50 @@ another, then return true.
 //   })();
 // })(45);
 
-function bigFunc(element){
-  let newarray = new Array(700).fill("💟 " + "💝 ");
+// function bigFunc(element){
+//   let newarray = new Array(700).fill("💟 " + "💝 ");
  
-  return newarray[element];
+//   return newarray[element];
 
+// }
+
+// console.log(bigFunc(500));
+// console.log(bigFunc(600));
+
+// function randomFunc(){
+//   for(var i = 0; i < 2; i++){
+//   setTimeout(()=> console.log("💘 " + i),1000);
+//   }
+//   }
+//   randomFunc();
+  
+// var val = 70000;
+
+// function func(a, b=0){
+//     let val = a + (a * b);
+//     return val
+// }
+
+//   func(400, 0.01)
+// console.log(val)
+
+function countNum(){
+  let count =0;
+  let countJ = 0;
+  for(let i=0; i<21; i++){
+    if(i){
+      console.log('i >>> ', i)
+      count += 1
+    }
+    for(let j =0; j<=10; j++){
+      if(j){
+           countJ += 1;
+           console.log('j >>> ', j)
+      }
+    }
+  }
+  console.log('Count >> ', count)
+  console.log('CountJ >>> ', countJ)
 }
 
-console.log(bigFunc(500));
-console.log(bigFunc(600));
-
-function randomFunc(){
-  for(var i = 0; i < 2; i++){
-  setTimeout(()=> console.log("💘 " + i),1000);
-  }
-  }
-  randomFunc();
-  
+countNum();
